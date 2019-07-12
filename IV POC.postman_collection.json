@@ -1,0 +1,718 @@
+{
+	"info": {
+		"_postman_id": "2aba9640-054e-4a32-ac3a-7960730419b0",
+		"name": "IV POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get shipnodes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8Dt0Okn44E8ZAnGcnbWDNDBFN1PJaM4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/configuration/shipNodes",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"configuration",
+						"shipNodes"
+					]
+				},
+				"description": "Getting shipnodes from dev instance"
+			},
+			"response": []
+		},
+		{
+			"name": "get settings",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "pxbvBP9j66b218YSzNMt8V1Vqw5x6O8r",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/configuration/settings",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"configuration",
+						"settings"
+					]
+				},
+				"description": "Get settings from dev instance"
+			},
+			"response": []
+		},
+		{
+			"name": "create token",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "yNI16O3YSUkrMemRD2xT0uwezzfFsSjS",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "grant_type=client_credentials"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"oauth2",
+						"token"
+					]
+				},
+				"description": "Get Bearer token using the given client id and secret"
+			},
+			"response": []
+		},
+		{
+			"name": "update shipnode",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TMWoMzx5pu6yLGWH5JW8O47bxLjMaNTZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"latitude\": 12,\r\n\t\"longitude\": 77\r\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/configuration/shipNodes/HeavyLiftWH3",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"configuration",
+						"shipNodes",
+						"HeavyLiftWH3"
+					]
+				},
+				"description": "update shipnode"
+			},
+			"response": []
+		},
+		{
+			"name": "get supplies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6qbUYtMK0YnmJg2hpZvbaPChKwvofahZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/supplies?itemId=200322&unitOfMeasure=EACH&productClass=Good&shipNode=HeavyLiftWH3",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"supplies"
+					],
+					"query": [
+						{
+							"key": "itemId",
+							"value": "200322"
+						},
+						{
+							"key": "unitOfMeasure",
+							"value": "EACH"
+						},
+						{
+							"key": "productClass",
+							"value": "Good"
+						},
+						{
+							"key": "shipNode",
+							"value": "HeavyLiftWH3"
+						}
+					]
+				},
+				"description": "get supplies"
+			},
+			"response": []
+		},
+		{
+			"name": "get demand",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6qbUYtMK0YnmJg2hpZvbaPChKwvofahZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/demands?shipNode=HeavyLiftWH3&itemId=200322&unitOfMeasure=EACH&productClass=Good",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"demands"
+					],
+					"query": [
+						{
+							"key": "shipNode",
+							"value": "HeavyLiftWH3"
+						},
+						{
+							"key": "itemId",
+							"value": "200322"
+						},
+						{
+							"key": "unitOfMeasure",
+							"value": "EACH"
+						},
+						{
+							"key": "productClass",
+							"value": "Good"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get shipnode details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "wdlRbcByQcg03yA3EKobiHSDA5a9vS4d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/configuration/shipNodes",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"configuration",
+						"shipNodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update DG",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "72EadEF7Eo8p6cT17OSS4m2vkZNKRBhl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"shipNodes\": [\n\t{\n\t\t\"shipNode\": \"0625\"\n\t},\n\t{\n\t\t\"shipNode\": \"0625_SC\"\n\t},\n\t{\n\t\t\"shipNode\": \"0629\"\n\t},\n\t{\n\t\t\"shipNode\": \"0629_SC\"\n\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/configuration/distributionGroups/dg_heavylift",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"configuration",
+						"distributionGroups",
+						"dg_heavylift"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supply sync",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6qbUYtMK0YnmJg2hpZvbaPChKwvofahZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"supplies\": [{\r\n    \"eta\": \"1900-01-01T00:00:00Z\",\r\n    \"itemId\": \"200322\",\r\n    \"lineReference\": \" \",\r\n    \"productClass\": \"Good\",\r\n    \"quantity\": 100.0,\r\n    \"reference\": \" \",\r\n    \"referenceType\": \" \",\r\n    \"segment\": \"ONLINE\",\r\n    \"segmentType\": \"MTO\",\r\n    \"shipByDate\": \"2500-01-01T00:00:00Z\",\r\n    \"shipNode\": \"HeavyLiftWH2\",\r\n    \"sourceTs\": \"2016-12-05T17:14:37Z\",\r\n    \"tagNumber\": \" \",\r\n    \"type\": \"ONHAND\",\r\n    \"unitOfMeasure\": \"EACH\"\r\n  }]\r\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/supplies",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"supplies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adjust supply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "62Y3H1iPh5LeD7jsMOkna6AiUA4iBgJK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"supplies\": [{\r\n    \"adjustmentReason\": \"ADJUSTMENT\",\r\n    \"changedQuantity\": -1.0,\r\n    \"eta\": \"1900-01-01T00:00:00Z\",\r\n    \"itemId\": \"200322\",\r\n    \"lineReference\": \" \",\r\n    \"productClass\": \"NEW\",\r\n    \"reference\": \" \",\r\n    \"referenceType\": \" \",\r\n    \"segment\": \"ONLINE\",\r\n    \"segmentType\": \"MTO\",\r\n    \"shipByDate\": \"2500-01-01T00:00:00Z\",\r\n    \"shipNode\": \"HeavyLiftWH2\",\r\n    \"sourceTs\": \"2016-12-05T17:14:37Z\",\r\n    \"tagNumber\": \" \",\r\n    \"type\": \"ONHAND\",\r\n    \"unitOfMeasure\": \"EACH\"\r\n  }]\r\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/supplies",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"supplies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get dg details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "H3KQRnOInXm1D1rrBGpeNhnVFSPEEcDQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/configuration/distributionGroups/dg_heavylift",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"configuration",
+						"distributionGroups",
+						"dg_heavylift"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get node availability",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6qbUYtMK0YnmJg2hpZvbaPChKwvofahZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lines\": [{\r\n    \"deliveryMethod\": \"SHP\",\r\n    \"itemId\": \"200322\",\r\n    \"lineId\": \"1\",\r\n    \"productClass\": \"Good\",\r\n    \"shipNodes\": [\"HeavyLiftWH3\"],\r\n    \"unitOfMeasure\": \"EACH\"\r\n  }],\r\n  \"segment\": \"\",\r\n  \"segmentType\": \"MTO\"\r\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/8cb7e26a/v1/availability/node",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"8cb7e26a",
+						"v1",
+						"availability",
+						"node"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "wdlRbcByQcg03yA3EKobiHSDA5a9vS4d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lines\": [{\r\n    \"deliveryMethod\": \"SHP\",\r\n    \"distributionGroup\": \"dg_heavylift\",\r\n    \"itemId\": \"200322\",\r\n    \"lineId\": \"1\",\r\n    \"productClass\": \"Good\",\r\n    \"quantity\": 3.0,\r\n    \"shipNode\": \"HeavyLiftWH3\",\r\n    \"unitOfMeasure\": \"EACH\"\r\n  }],\r\n  \"reference\": \"REF1\",\r\n  \"segment\": \"ONLINE\",\r\n  \"segmentType\": \"MTO\",\r\n  \"timeToExpire\": 15\r\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/42dd13f4/v1/reservations",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"42dd13f4",
+						"v1",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get network availability",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "72EadEF7Eo8p6cT17OSS4m2vkZNKRBhl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"distributionGroupId\": \"DG_WE_RTAM\",\r\n  \"lines\": [{\r\n    \"deliveryMethod\": \"SHP\",\r\n    \"distributionGroupId\": \"DG_WE_RTAM\",\r\n    \"itemId\": \"DJ1330_470\",\r\n    \"lineId\": \"1\",\r\n    \"productClass\": \"NEW\",\r\n    \"unitOfMeasure\": \"PIECE\"\r\n  }],\r\n  \"segment\": \"\",\r\n  \"segmentType\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/42dd13f4/v1/availability/network",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"42dd13f4",
+						"v1",
+						"availability",
+						"network"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "73DL2DRar4Rr2SA5fRfXbgS5mrszsqFN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://eu-api.watsoncommerce.ibm.com/inventory/42dd13f4/v1/reservations?id=8ff518dd-62af-454c-afc2-edf2a6bc1d23",
+					"protocol": "https",
+					"host": [
+						"eu-api",
+						"watsoncommerce",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"inventory",
+						"42dd13f4",
+						"v1",
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8ff518dd-62af-454c-afc2-edf2a6bc1d23"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3f24d239-6b64-43c4-ad50-dcdcde6ff825",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "afd19cf6-815c-4e37-8c99-6d9d0c19d72c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
