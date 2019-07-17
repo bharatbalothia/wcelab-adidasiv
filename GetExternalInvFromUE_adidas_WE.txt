@@ -1,0 +1,244 @@
+Find Inventory from IV
+
+Use Case#1: Inventory available at 0625 for Item ID DM7678_690
+Input:
+<Promise CheckInventory="Y" OrganizationCode="adidas_WE">
+	<PromiseLines>
+        <PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="1" ItemID="DM7678_690" DeliveryMethod="SHP" RequiredQty="5"/>
+	</PromiseLines>	
+</Promise>
+
+Output:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Promise CheckInventory="Y" OptimizationType="01" OrganizationCode="adidas_WE">
+   <SuggestedOption>
+      <Option AvailableFromUnplannedInventory="N" FirstDate="2019-04-17T14:26:20+00:00" HasAnyUnavailableQty="N" LastDate="2019-04-17T14:26:20+00:00" LeastPriority="0.00" MaxPriority="0.00" NodeQty="5.00" OptionNo="1" TotalShipments="1">
+         <PromiseLines TotalNumberOfRecords="1">
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="DM7678_690" KitQty="1.00" LineId="" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="5" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T14:26:20+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="5.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T14:26:20+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+         </PromiseLines>
+
+         <PromiseServiceLines TotalNumberOfRecords="0" />
+
+         <Interactions TotalNumberOfRecords="1">
+            <Interaction Carrier="" CarrierServiceCode="" DeliveryDate="2019-04-17T14:26:20+00:00" DeliveryMethod="SHP" EarliestDate="2019-04-17T00:00:00+00:00" InteractionNo="1" IsDelivery="N" ItemGroupCode="PROD" LastDate="2019-05-17T23:59:59+00:00" Node="0625" OrganizationCode="" ShipDate="2019-04-17T14:26:20+00:00" TotalHandlingUnits="0.00">
+               <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PreferredShipAddress="" State="" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N" />
+            </Interaction>
+         </Interactions>
+      </Option>
+   </SuggestedOption>
+
+   <Options TotalNumberOfRecords="0" />
+</Promise>
+
+Use Case#2: Inventory available at 0625 for Item ID DM7678_690 and CN4807_570
+Input:
+
+<Promise CheckInventory="Y" OrganizationCode="adidas_WE">
+	<PromiseLines>
+        <PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="1" ItemID="DM7678_690" DeliveryMethod="SHP" RequiredQty="5"/>
+		<PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="2" ItemID="CN4807_570" DeliveryMethod="SHP" RequiredQty="5"/>
+	</PromiseLines>	
+</Promise>
+
+Output:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Promise CheckInventory="Y" OptimizationType="01" OrganizationCode="adidas_WE">
+   <SuggestedOption>
+      <Option AvailableFromUnplannedInventory="N" FirstDate="2019-04-17T14:41:34+00:00" HasAnyUnavailableQty="N" LastDate="2019-04-17T14:41:34+00:00" LeastPriority="0.00" MaxPriority="0.00" NodeQty="10.00" OptionNo="1" TotalShipments="1">
+         <PromiseLines TotalNumberOfRecords="2">
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="DM7678_690" KitQty="1.00" LineId="" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="5" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T14:41:34+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="5.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T14:41:34+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="CN4807_570" KitQty="1.00" LineId="" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="5" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T14:41:34+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="5.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T14:41:34+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+         </PromiseLines>
+
+         <PromiseServiceLines TotalNumberOfRecords="0" />
+
+         <Interactions TotalNumberOfRecords="1">
+            <Interaction Carrier="" CarrierServiceCode="" DeliveryDate="2019-04-17T14:41:34+00:00" DeliveryMethod="SHP" EarliestDate="2019-04-17T00:00:00+00:00" InteractionNo="1" IsDelivery="N" ItemGroupCode="PROD" LastDate="2019-05-17T23:59:59+00:00" Node="0625" OrganizationCode="" ShipDate="2019-04-17T14:41:34+00:00" TotalHandlingUnits="0.00">
+               <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PreferredShipAddress="" State="" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N" />
+            </Interaction>
+         </Interactions>
+      </Option>
+   </SuggestedOption>
+
+   <Options TotalNumberOfRecords="0" />
+</Promise>
+
+Use Case#3: Inventory available at 0625 and 0629 for Item ID D68793_061
+Input:
+<Promise CheckInventory="Y" OrganizationCode="adidas_WE">
+	<PromiseLines>
+        <PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="1" ItemID="D68793_061" DeliveryMethod="SHP" RequiredQty="15"/>
+	</PromiseLines>	
+</Promise>
+
+Output:
+<?xml version="1.0" encoding="UTF-8"?>
+<Promise CheckInventory="Y" OptimizationType="01" OrganizationCode="adidas_WE">
+   <SuggestedOption>
+      <Option AvailableFromUnplannedInventory="N" FirstDate="2019-04-17T15:06:51+00:00" HasAnyUnavailableQty="N" LastDate="2019-04-17T15:06:51+00:00" LeastPriority="0.00" MaxPriority="0.00" NodeQty="15.00" OptionNo="1" TotalShipments="1">
+         <PromiseLines TotalNumberOfRecords="1">
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="D68793_061" KitQty="1.00" LineId="1" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="15" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T15:06:51+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="15.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T15:06:51+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+         </PromiseLines>
+
+         <PromiseServiceLines TotalNumberOfRecords="0" />
+
+         <Interactions TotalNumberOfRecords="1">
+            <Interaction Carrier="" CarrierServiceCode="" DeliveryDate="2019-04-17T15:06:51+00:00" DeliveryMethod="SHP" EarliestDate="2019-04-17T00:00:00+00:00" InteractionNo="1" IsDelivery="N" ItemGroupCode="PROD" LastDate="2019-05-17T23:59:59+00:00" Node="0625" OrganizationCode="" ShipDate="2019-04-17T15:06:51+00:00" TotalHandlingUnits="0.00">
+               <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PreferredShipAddress="" State="" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N" />
+            </Interaction>
+         </Interactions>
+      </Option>
+   </SuggestedOption>
+
+   <Options TotalNumberOfRecords="0" />
+</Promise>
+
+Use Case#4: Inventory available at 0625 and 0629 for Item ID D68793_061 and at 0625 for Item ID CN4807_570
+Input:
+
+<Promise CheckInventory="Y" OrganizationCode="adidas_WE">
+	<PromiseLines>
+        <PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="1" ItemID="D68793_061" DeliveryMethod="SHP" RequiredQty="12"/>
+		<PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="2" ItemID="CN4807_570" DeliveryMethod="SHP" RequiredQty="9"/>
+	</PromiseLines>	
+</Promise>
+
+Output:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Promise CheckInventory="Y" OptimizationType="01" OrganizationCode="adidas_WE">
+   <SuggestedOption>
+      <Option AvailableFromUnplannedInventory="N" FirstDate="2019-04-17T15:09:06+00:00" HasAnyUnavailableQty="N" LastDate="2019-04-17T15:09:06+00:00" LeastPriority="0.00" MaxPriority="0.00" NodeQty="21.00" OptionNo="1" TotalShipments="1">
+         <PromiseLines TotalNumberOfRecords="2">
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="CN4807_570" KitQty="1.00" LineId="2" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="9" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T15:09:06+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="9.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T15:09:06+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="D68793_061" KitQty="1.00" LineId="1" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="12" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T15:09:06+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="12.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T15:09:06+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+         </PromiseLines>
+
+         <PromiseServiceLines TotalNumberOfRecords="0" />
+
+         <Interactions TotalNumberOfRecords="1">
+            <Interaction Carrier="" CarrierServiceCode="" DeliveryDate="2019-04-17T15:09:06+00:00" DeliveryMethod="SHP" EarliestDate="2019-04-17T00:00:00+00:00" InteractionNo="1" IsDelivery="N" ItemGroupCode="PROD" LastDate="2019-05-17T23:59:59+00:00" Node="0625" OrganizationCode="" ShipDate="2019-04-17T15:09:06+00:00" TotalHandlingUnits="0.00">
+               <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PreferredShipAddress="" State="" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N" />
+            </Interaction>
+         </Interactions>
+      </Option>
+   </SuggestedOption>
+
+   <Options TotalNumberOfRecords="0" />
+</Promise>
+
+Use Case#5: Inventory unavailable in IV for Item ID devItem1 and at 0625 for Item ID CN4807_570
+Input:
+<Promise CheckInventory="Y" OrganizationCode="adidas_WE">
+	<PromiseLines>
+        <PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="1" ItemID="devItem1" DeliveryMethod="SHP" RequiredQty="12"/>
+		<PromiseLine UnitOfMeasure="PIECE" ProductClass="NEW" LineId="2" ItemID="CN4807_570" DeliveryMethod="SHP" RequiredQty="9"/>
+	</PromiseLines>	
+</Promise>
+
+Output:
+<?xml version="1.0" encoding="UTF-8"?>
+<Promise CheckInventory="Y" OptimizationType="01" OrganizationCode="adidas_WE">
+   <SuggestedOption>
+      <Option AvailableFromUnplannedInventory="N" FirstDate="2019-04-17T15:10:57+00:00" HasAnyUnavailableQty="Y" LastDate="2019-04-17T15:10:57+00:00" LeastPriority="0.00" MaxPriority="0.00" NodeQty="19.00" OptionNo="1" TotalShipments="1">
+         <PromiseLines TotalNumberOfRecords="2">
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="devItem1" KitQty="1.00" LineId="1" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="12" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="2">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T15:10:57+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="10.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T15:10:57+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+
+                  <Assignment EmptyAssignmentReason="NOT_ENOUGH_PRODUCT_CHOICES" IsIdleAsset="N" MergeNode="" Quantity="2.00" SCAC="" ShipNode="">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+
+            <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FulfillmentType="" IsBundleParent="N" ItemID="CN4807_570" KitQty="1.00" LineId="2" NewItemID="" ProductClass="NEW" ReceivingNode="" RequiredQty="9" SCAC="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="PIECE">
+               <Assignments TotalNumberOfRecords="1">
+                  <Assignment AvailableFromUnplannedInventory="N" DeliveryDate="2019-04-17T15:10:57+00:00" Distance="0.00" ExternalNode="Y" InteractionNo="1" IsIdleAsset="N" MergeNode="" NodePriority="0.00" ProcuredQty="0.00" ProductAvailDate="2019-04-17" Quantity="9.00" ReservedQty="0.00" SCAC="" SegmentChangeQty="0.00" ShipDate="2019-04-17T15:10:57+00:00" ShipNode="0625" SubstitutedQty="0.00">
+                     <SubstituteItems />
+
+                     <Procurements />
+                  </Assignment>
+               </Assignments>
+            </PromiseLine>
+         </PromiseLines>
+
+         <PromiseServiceLines TotalNumberOfRecords="0" />
+
+         <Interactions TotalNumberOfRecords="1">
+            <Interaction Carrier="" CarrierServiceCode="" DeliveryDate="2019-04-17T15:10:57+00:00" DeliveryMethod="SHP" EarliestDate="2019-04-17T00:00:00+00:00" InteractionNo="1" IsDelivery="N" ItemGroupCode="PROD" LastDate="2019-05-17T23:59:59+00:00" Node="0625" OrganizationCode="" ShipDate="2019-04-17T15:10:57+00:00" TotalHandlingUnits="0.00">
+               <PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PreferredShipAddress="" State="" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N" />
+            </Interaction>
+         </Interactions>
+      </Option>
+
+      <UnavailableLines>
+         <UnavailableLine AssignedQty="10.00" ItemGroupCode="PROD" ItemID="devItem1" LineId="1" ProductClass="NEW" RequiredQty="12.00" UnavailableReason="NOT_ENOUGH_PRODUCT_CHOICES" UnitOfMeasure="PIECE">
+            <Messages>
+               <Message Text="Sourcing rule found - sourcing rule key being used is : 3017061406295624325" />
+            </Messages>
+         </UnavailableLine>
+      </UnavailableLines>
+   </SuggestedOption>
+
+   <Options TotalNumberOfRecords="0" />
+</Promise>
+
